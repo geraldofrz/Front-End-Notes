@@ -3,11 +3,10 @@
 import { Container } from "./styles";
 
 
-export function Section({title, children}) {
+export function ButtonTenxt({title, ...rest}) {
   return(
-    <Container>
-      <h2>{title}</h2>
-      {children}
+    <Container type="button" {...rest}>
+      {title}
     </Container>
   );
 }
