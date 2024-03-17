@@ -3,9 +3,9 @@
 import { Container } from "./styles";
 
 
-export function ButtonTenxt({title, ...rest}) {
+export function ButtonText({title, isActive = false, ...rest}) {
   return(
-    <Container type="button" {...rest}>
+    <Container type="button" {...rest} $isActive={isActive}>
       {title}
     </Container>
   );
