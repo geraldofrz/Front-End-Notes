@@ -6,7 +6,7 @@ import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
 import { Section } from "../../components/Section";
 import { Tag } from "../../components/Tag";
-import { ButtonTenxt } from "../../components/ButtonText";
+import { ButtonText } from "../../components/ButtonText";
 
 export function Details() {
   return (
@@ -15,7 +15,7 @@ export function Details() {
 
       <main>
         <Content>
-          <ButtonTenxt title="Excluir nota" />
+          <ButtonText title="Excluir nota" />
 
           <h1>Testando a testa com testosterona</h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed nemo, ipsa, voluptatum autem reprehenderit, dolorum cupiditate facere deleniti vel quo animi corrupti? Esse perferendis distinctio perspiciatis odio beatae laudantium.</p>
