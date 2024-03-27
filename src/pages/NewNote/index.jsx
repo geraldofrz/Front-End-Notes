@@ -9,6 +9,7 @@ import { Textarea } from "../../components/Textarea";
 import { Container, Form } from "./styles";
 import { useState } from "react";
 import { api } from "../../services/api";
+import { useNavigate } from "react-router-dom";
 
 export function NewNote() {
   const [title, setTitle] = useState("");
@@ -46,15 +47,15 @@ export function NewNote() {
 
   async function handleNewNote() {
     if(!title) {
-      alert("Adicione um título para a nota")
+      return alert("Adicione um título para a nota")
     }
     
     if(newLink) {
-      alert("Você tem um link não adicionado, adicione ou o remova")
+      return alert("Você tem um link não adicionado, adicione ou o remova")
     }
 
     if(newTag) {
-      alert("Você tem uma tag não adicionada, adicione ou a remova")
+      return alert("Você tem uma tag não adicionada, adicione ou a remova")
     }
 
     await api.post('/notes',{
