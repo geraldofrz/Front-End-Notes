@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 import { Home } from "../pages/Home";
 import { NewNote } from "../pages/NewNote";
@@ -13,6 +13,8 @@ export function AppRoutes() {
       <Route path="/new" element={<NewNote />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/details/:id" element={<Details />} />
+
+      <Route path="*" element={ <Navigate to="/" /> } />
     </Routes>
   )
 }
